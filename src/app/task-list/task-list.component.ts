@@ -14,7 +14,10 @@ export class TaskListComponent {
   }
 
   addTask(task: string) {
-    console.log('Adding task:', task);
+    if (task && task.trim().length > 0) {
+      console.log('Adding task:', task);
+      this.tasks.push(task);
+    }
   }
 
   updateTask(task: string) {
